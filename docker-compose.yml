@@ -6,3 +6,8 @@ services:
     build:
       context: .
       dockerfile: Redzone.API/Dockerfile
+
+  orderdb:
+    image: postgres
+volumes:
+  postgres_data:

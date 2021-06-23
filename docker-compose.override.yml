@@ -2,7 +2,24 @@ version: '3.4'
 
 services:
   redzone.api:
+    container_name: redzone.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=orderdb;Port=27017;Database=OrderDb;User Id=admin;Password=admin1234;"
+    depends_on:
+      - orderdb
     ports:
-      - "80"
+      - "8000:80"
+
+  orderdb:
+    container_name: orderdb
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=OrderDb
+    restart: always
+    ports:
+      - "27017:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+

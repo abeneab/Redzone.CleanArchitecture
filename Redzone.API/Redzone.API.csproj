@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.1.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.1.4" />
@@ -16,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Redzone.Application\Redzone.Application.csproj" />
     <ProjectReference Include="..\Redzone.Domain\Redzone.Domain.csproj" />
+    <ProjectReference Include="..\Redzone.Infrastructure\Redzone.Infrastructure.csproj" />
   </ItemGroup>
 
 
