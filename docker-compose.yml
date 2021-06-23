@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  redzone.api:
+    image: ${DOCKER_REGISTRY-}redzoneapi
+    build:
+      context: .
+      dockerfile: Redzone.API/Dockerfile
