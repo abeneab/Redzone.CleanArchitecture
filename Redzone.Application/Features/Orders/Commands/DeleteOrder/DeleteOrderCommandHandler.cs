@@ -28,7 +28,7 @@ namespace Redzone.Application.Features.Orders.Commands
                 throw new NotFoundException(nameof(Order), request.ID);
             }
             await _orderRepository.DeleteAsync(order);
-            _logger.LogInformation($"Order {order.Guid} is successfully deleted.");
+            _logger.LogInformation($"Order {order.Id} is successfully deleted.");
             return Unit.Value;
         }
     }

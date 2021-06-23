@@ -26,7 +26,7 @@ namespace Redzone.Application.Services
         {
             var model = orderEntity.MapToModel();
             var data = await _orderRepository.AddAsync(model);
-            return data.Guid;
+            return data.Id;
         }
 
         public async Task DeleteOrder(Guid guid)

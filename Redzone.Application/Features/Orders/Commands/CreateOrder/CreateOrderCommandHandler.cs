@@ -20,8 +20,8 @@ namespace Redzone.Application.Features.Orders.Commands.CreateOrder
         {
             var order = request.MapToModel();
             var newOrder = await _orderRepository.AddAsync(order);
-            _logger.LogInformation($"Order {newOrder.Guid} is successfully created.");
-            return newOrder.Guid;
+            _logger.LogInformation($"Order {newOrder.Id} is successfully created.");
+            return newOrder.Id;
         }
     }
 }

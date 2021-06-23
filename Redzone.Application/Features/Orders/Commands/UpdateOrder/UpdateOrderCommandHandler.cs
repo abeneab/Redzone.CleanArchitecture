@@ -27,7 +27,7 @@ namespace Redzone.Application.Features.Orders.Commands.UpdateOrder
             }
             var model = request.MapToModel(orderToUpdate);
             await _orderRepository.UpdateAsync(model);
-            _logger.LogInformation($"Order {orderToUpdate.Guid} is successfully updated.");
+            _logger.LogInformation($"Order {orderToUpdate.Id} is successfully updated.");
             return Unit.Value;
 
         }

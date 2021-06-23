@@ -6,7 +6,7 @@ namespace Redzone.Domain.Seeds
 {
     public abstract class BaseAuditModel
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
         public Guid CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public Guid? LastModifiedBy { get; set; }

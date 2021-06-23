@@ -32,7 +32,7 @@ namespace Redzone.Domain.Entities
         }
         public OrderEntity(Order order)
         {
-            this.Guid = order.Guid;
+            this.Guid = order.Id;
             this.IsActive = order.IsActive;
             this.CreatedbyUserGuid = order.CreatedBy;
             this.CreatedDate = order.CreatedDate;
@@ -57,7 +57,7 @@ namespace Redzone.Domain.Entities
         public override Order MapToModel()
         {
             Order order = new Order();
-            order.Guid = this.Guid;
+            order.Id = this.Guid;
             order.IsActive = this.IsActive;
             order.CreatedBy = this.CreatedbyUserGuid;
             order.CreatedDate = this.CreatedDate;
@@ -83,7 +83,7 @@ namespace Redzone.Domain.Entities
         public override Order MapToModel(Order t)
         {
             Order order = t;
-            order.Guid = this.Guid;
+            order.Id = this.Guid;
             order.IsActive = this.IsActive;
             order.CreatedBy = this.CreatedbyUserGuid;
             order.CreatedDate = this.CreatedDate;
