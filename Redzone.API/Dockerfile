@@ -7,6 +7,9 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["Redzone.API/Redzone.API.csproj", "Redzone.API/"]
+COPY ["Redzone.Domain/Redzone.Domain.csproj", "Redzone.Domain/"]
+COPY ["Redzone.Infrastructure/Redzone.Infrastructure.csproj", "Redzone.Infrastructure/"]
+COPY ["Redzone.Application/Redzone.Application.csproj", "Redzone.Application/"]
 RUN dotnet restore "Redzone.API/Redzone.API.csproj"
 COPY . .
 WORKDIR "/src/Redzone.API"
